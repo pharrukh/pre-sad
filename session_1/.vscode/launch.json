@@ -1,0 +1,25 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": ".NET Core Launch (console)",
+			"type": "coreclr",
+			"request": "launch",
+			// set build task name
+			"preLaunchTask": "build",
+			// set dll path
+			"program": "${workspaceFolder}/bin/Debug/netcoreapp3.1/pre-sad.dll",
+			"args": [
+				"4",
+				"3",
+				"2",
+				"1"
+			],
+			// set project dir path
+			"cwd": "${workspaceRoot}",
+			"console": "internalConsole",
+			"stopAtEntry": false,
+			"internalConsoleOptions": "openOnSessionStart"
+		}
+	]
+}
