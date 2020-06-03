@@ -9,15 +9,10 @@
 			"preLaunchTask": "build",
 			// set dll path
 			"program": "${workspaceFolder}/bin/Debug/netcoreapp3.1/pre-sad.dll",
-			"args": [
-				"4",
-				"3",
-				"2",
-				"1"
-			],
+			"args": [],
 			// set project dir path
 			"cwd": "${workspaceRoot}",
-			"console": "internalConsole",
+			"console": "externalTerminal",
 			"stopAtEntry": false,
 			"internalConsoleOptions": "openOnSessionStart"
 		}
