@@ -12,8 +12,8 @@ namespace LibraryApp.UI
             builder = new SqlConnectionStringBuilder();
 
             builder.DataSource = "uzlearning.database.windows.net";
-            builder.UserID = "uzlearning-master";
-            builder.Password = "xWb3yT**A$Wf3*27$Zmc";
+            builder.UserID = "ooops";
+            builder.Password = "oooops";
             builder.InitialCatalog = "course_db";
 
             Console.WriteLine("WELCOME TO LIBRARY APPLICATION. TYPE COMMAND:");
