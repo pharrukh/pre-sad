@@ -36,7 +36,7 @@ Console.WriteLine(year);
 void CalculateArea(int a, int b, out int area){
     area = a * b;
 }
-int area;
+int area = 1;
 CalculateArea(10,20, out area);
 Console.WriteLine(area);
 
