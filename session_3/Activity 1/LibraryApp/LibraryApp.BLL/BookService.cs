@@ -7,9 +7,9 @@ namespace LibraryApp.BLL
 {
     public class BookService
     {
-        private readonly IRepository<Book> _repo;
+        private readonly IBookRepository _repo;
 
-        public BookService(IRepository<Book> repo)
+        public BookService(IBookRepository repo)
         {
             _repo = repo;
         }

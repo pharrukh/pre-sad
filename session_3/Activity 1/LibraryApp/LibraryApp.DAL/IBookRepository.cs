@@ -4,10 +4,10 @@ using System.Text;
 
 namespace LibraryApp.DAL
 {
-    public interface IRepository<T>
+    public interface IBookRepository
     {
-        List<T> GetAll();
+        List<Book> GetAll();
 
-        void Create(T entity);
+        void Create(Book book);
     }
 }

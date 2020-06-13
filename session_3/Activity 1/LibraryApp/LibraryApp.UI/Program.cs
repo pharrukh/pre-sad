@@ -7,12 +7,12 @@ namespace LibraryApp.UI
 {
     class Program
     {
-        static BookRepository _bookRepo;
+        static BookRepositoryAzure _bookRepo;
         static BookService _bookService;
 
         static void Main(string[] args)
         {
-            _bookRepo = new BookRepository();
+            _bookRepo = new BookRepositoryAzure();
             _bookService = new BookService(_bookRepo);
 
             Console.WriteLine("WELCOME TO LIBRARY APPLICATION. TYPE COMMAND:");
