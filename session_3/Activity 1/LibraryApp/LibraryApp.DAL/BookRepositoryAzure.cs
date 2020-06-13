@@ -5,11 +5,11 @@ using System.Text;
 
 namespace LibraryApp.DAL
 {
-    public class BookRepository: IRepository<Book>
+    public class BookRepositoryAzure : IBookRepository
     {
         private readonly SqlConnectionStringBuilder builder;
 
-        public BookRepository()
+        public BookRepositoryAzure()
         {
             builder = new SqlConnectionStringBuilder
             {
@@ -48,15 +48,15 @@ namespace LibraryApp.DAL
             return books;
         }
 
-        public void Create(Book entity)
+        public void Create(Book book)
         {
             const string sqlCommand = "INSERT INTO Books (Title, Author) VALUES (@title, @author)";
             using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
             {
                 using (SqlCommand command = new SqlCommand(sqlCommand, connection))
                 {
-                    command.Parameters.AddWithValue("@title", entity.Title);
-                    command.Parameters.AddWithValue("@author", entity.Author);
+                    command.Parameters.AddWithValue("@title", book.Title);
+                    command.Parameters.AddWithValue("@author", book.Author);
                     connection.Open();
                     command.ExecuteNonQuery();
                 }
